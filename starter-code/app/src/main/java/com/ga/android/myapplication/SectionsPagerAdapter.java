@@ -19,9 +19,16 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        switch (position){
+        switch (position) {
             //Complete this
-            default: return new PlaceholderFragment();
+            case 0:
+                return new PictureFragment();
+            case 1:
+                return new AboutMeFragment();
+            case 2:
+                return new ContactFragment();
+            default:
+                return new PlaceholderFragment();
         }
 
     }
@@ -34,7 +41,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        switch (position){
+        switch (position) {
             default:
             case 0:
                 return "PICTURE";
